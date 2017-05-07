@@ -13,6 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import javax.sql.DataSource;
 
 /**
@@ -22,6 +24,7 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @ComponentScan
 @MapperScan("cn.shan.mapper")
+@EnableSwagger2
 public class Application {
     private static Logger logger = Logger.getLogger(Application.class);
 

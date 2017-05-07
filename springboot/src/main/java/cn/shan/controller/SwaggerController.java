@@ -4,7 +4,7 @@ package cn.shan.controller;
  * Created by shanlehong on 2017/5/5.
  */
 import cn.shan.model.User;
-import com.wordnik.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
