@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.shan.mapper.DataDictMapper">
+
+    <resultMap type="cn.shan.model.DataDict" id="dataDictMap">
+        <!-- 用id属性来映射主键字段 -->
+        <id property="id" column="id"/>
+        <!-- 用result属性来映射非主键字段 -->
+        <result property="dataType" column="data_type"/>
+        <result property="dataTypeName" column="data_type_name"/>
+        <result property="dataTypeEnum" column="data_type_enum"/>
+        <result property="dataTypeEnumName" column="data_type_enum_name"/>
+        <result property="deleteFlg" column="delete_flg"/>
+    </resultMap>
+
+    <select id="getDataDict" resultMap="dataDictMap" >
+        SELECT * FROM
+        data_dict;
+    </select>
+
+</mapper>

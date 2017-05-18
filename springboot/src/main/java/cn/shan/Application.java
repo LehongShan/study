@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -25,6 +26,7 @@ import javax.sql.DataSource;
 @ComponentScan
 @MapperScan("cn.shan.mapper")
 @EnableSwagger2
+@ServletComponentScan
 public class Application {
     private static Logger logger = Logger.getLogger(Application.class);
 
