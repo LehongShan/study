@@ -83,11 +83,11 @@ Ext.define('MyApp.view.main.Main', {
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
+        title: '数据字典',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [{
+            xtype: 'datadictList'
+        }]
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
