@@ -29,9 +29,10 @@ public class SearchSort extends BaseSort {
             int minIndex = i;
             //优化后的方案是内层循环只需要找到比scoreArr[i]要小的数据元素记录下标
             for (int j = i+1;j<size;j++){
-                if (scoreArr[i]>scoreArr[j]){
+                if (scoreArr[minIndex]>scoreArr[j]){
                     minIndex = j;
                 }
+
             }
             //出内层循环时候再做判断最小元素的小标是否改变
             if (minIndex!=i){
@@ -40,6 +41,7 @@ public class SearchSort extends BaseSort {
                 scoreArr[i] = temp;
 
             }
+
         }
         System.out.println("\n直接选择排序优化开始");
         print();

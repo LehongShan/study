@@ -5,15 +5,32 @@ import org.junit.Test;
 /**
  * 排序触发客户端
  * Created by shanlehong on 2017/12/12.
+ *
  */
 public class SortClient {
 
     @Test
-    public void testSort() {
+    public void testBubbleSort() {
         BaseSort.print();
         BubbleSort.sort();
-        QuickSort.sort();
-        SearchSort.sort();
-        SearchSort.sort2();
     }
+    @Test
+    public void testSearchSort() {
+        BaseSort.print();
+        SearchSort.sort();
+
+    }
+    @Test
+    public void testSearchSort2() {
+        BaseSort.print();
+        SearchSort.sort2();
+
+    }
+    @Test
+    public void testInsertSort() {
+        BaseSort.print();
+        InsertSort.sort();
+
+    }
+
 }
