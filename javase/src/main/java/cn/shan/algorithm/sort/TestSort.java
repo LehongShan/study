@@ -9,7 +9,8 @@ public class TestSort {
 
     @Test
     public void testBubbleSort() {
-        BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.sort();
+        BaseSort.print();
+        BubbleSort.sort();
+        QuickSort.sort();
     }
 }
