@@ -32,5 +32,10 @@ public class SortClient {
         InsertSort.sort();
 
     }
+    @Test
+    public void testBinaryInsertSort() {
+        BaseSort.print();
+        BinaryInsertSort.sort();
 
+    }
 }
