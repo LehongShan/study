@@ -9,10 +9,13 @@ public class QuickSort extends BaseSort {
     public static void  sort(){
 
         sort(scoreArr,0,scoreArr.length-1);
+        System.out.println("\n快速排序开始");
+        print();
+        System.out.println("\n快速排序结束");
 
     }
 
-    public static void sort(int [] arr,int low,int high){
+    private static void sort(int [] arr,int low,int high){
         int start = low;
         int end = high;
         int key = arr[low];
@@ -38,13 +41,11 @@ public class QuickSort extends BaseSort {
             if (start>low) {
                 sort(arr,low,start-1);
             }
-            if (start>low){
-                sort(arr,low,start-1);
+            if (end<high) {
+                sort(arr,end+1,high);
             }
         }
-        System.out.println("\n快速排序开始");
-        print();
-        System.out.println("\n快速排序结束");
+
     }
 
 

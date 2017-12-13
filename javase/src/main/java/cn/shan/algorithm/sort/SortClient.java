@@ -15,6 +15,11 @@ public class SortClient {
         BubbleSort.sort();
     }
     @Test
+    public void testQuickSort(){
+        BaseSort.print();
+        QuickSort.sort();
+    }
+    @Test
     public void testSearchSort() {
         BaseSort.print();
         SearchSort.sort();
