@@ -41,6 +41,11 @@ public class SortClient {
     public void testBinaryInsertSort() {
         BaseSort.print();
         BinaryInsertSort.sort();
+    }
 
+    @Test
+    public void testMergeSort() {
+        BaseSort.print();
+        MergeSort.sort();
     }
 }
