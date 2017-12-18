@@ -17,6 +17,10 @@ public class ListClient {
         linkList.add("d");
         linkList.add("e");
         linkList.printLinkList();
+        linkList.delete(1);
+        System.out.println();
+        linkList.printLinkList();
+
     }
 
 }
