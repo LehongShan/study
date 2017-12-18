@@ -1,4 +1,4 @@
-package cn.shan.map;
+package cn.shan.datastructure.map;
 
 import org.junit.Test;
 import java.util.HashMap;

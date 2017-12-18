@@ -1,4 +1,4 @@
-package cn.shan.map;
+package cn.shan.datastructure.map;
 
 import cn.shan.comparable.Student;
 import org.junit.Test;
