@@ -21,5 +21,18 @@ public class QueueClient {
 
     }
 
+    @Test
+    public void testLoopQueue(){
+        LoopQueue<String> loopQueue = new LoopQueue<>();
+        loopQueue.add("aaaa");
+        loopQueue.add("bbbb");
+        loopQueue.printQueue();
+        loopQueue.remove();
+        System.out.println("\n以下新队列");
+        loopQueue.add("cccc");
+        loopQueue.printQueue();
+
+    }
+
 
 }
