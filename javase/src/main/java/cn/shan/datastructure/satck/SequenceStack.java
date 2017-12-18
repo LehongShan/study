@@ -1,4 +1,4 @@
-package cn.shan.satck;
+package cn.shan.datastructure.satck;
 
 import java.util.Arrays;
 

@@ -1,12 +1,10 @@
-package cn.shan.list;
+package cn.shan.datastructure.listv;
 
-import cn.shan.comparable.Student;
 import cn.shan.comparable.Student1;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeSet;
 
 /**
  * Created by shanlehong on 2017/4/5.

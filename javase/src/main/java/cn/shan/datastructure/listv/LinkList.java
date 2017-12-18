@@ -1,11 +1,12 @@
-package cn.shan.list;
+package cn.shan.datastructure.listv;
 
 /**
  * 链表
  * Created by shanlehong on 2017/12/15.
  */
 public class LinkList<T> {
-    private class Node{
+
+    private class Node {
         //保存节点的数据
         private T data;
         //指向下一节点的应用
