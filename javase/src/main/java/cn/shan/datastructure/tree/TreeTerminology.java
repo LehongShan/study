@@ -1,8 +1,13 @@
 package cn.shan.datastructure.tree;
 
 /**
- *
  * 树相关的术语：
+ * Created by shanlehong on 2017/12/18.
+ */
+public class TreeTerminology {
+/**
+ *
+ 树相关的术语：
  节点：树最基本组成单元，常包括一个数据元素及若干指针用于指向其他节点。
  节点的度：节点拥有的子树的个数被称为节点的度（degree)。
  叶子节点：度为0的节点被称为终端节点或叶子节点。
@@ -26,9 +31,5 @@ package cn.shan.datastructure.tree;
  返回指定节点（非叶子节点）的第i个子节点。
  返回该树的深度。
  返回指定节点的位置。
-
- *
- * Created by shanlehong on 2017/12/18.
  */
-public class TreeTerminology {
 }
