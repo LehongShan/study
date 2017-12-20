@@ -25,4 +25,19 @@ public class TreeClient {
         }
         System.out.println(treeParent.parent(root));
     }
+
+    @Test
+    public void  testTreeChild(){
+        TreeChild<String> treeChild = new TreeChild<>("root");
+        TreeChild.Node root = treeChild.root();
+        System.out.println(root);
+        treeChild.addNode("a",root);
+        List<TreeChild.Node<String>> nodeList = treeChild.children(root);
+        treeChild.addNode("b",nodeList.get(0));
+        List<TreeChild.Node<String>> nodeList1 = treeChild.children(root);
+        System.out.println("此树的深度为："+treeChild.deep());
+        for (TreeChild.Node<String> node:nodeList1){
+            System.out.println(node);
+        }
+    }
 }
