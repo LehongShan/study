@@ -40,4 +40,15 @@ public class TreeClient {
             System.out.println(node);
         }
     }
+
+    @Test
+    public void testArrayBinTree(){
+        ArrayBinTree<String> arrayBinTree = new ArrayBinTree<>(4,"root");
+        System.out.println("该二叉树的根节点:"+arrayBinTree.root());
+        arrayBinTree.add("1R",0,false);
+        arrayBinTree.add("1L",0,true);
+        System.out.println("该二叉树的根节点的左节点："+arrayBinTree.left(0)+" 右节点："+arrayBinTree.right(0));
+        arrayBinTree.add("2L",1,true);
+        System.out.println(arrayBinTree);
+    }
 }
