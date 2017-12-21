@@ -70,4 +70,23 @@ public class TreeClient {
 
         System.out.println("twoLinkBinTree的深度："+ twoLinkBinTree.deep());
     }
+
+    @Test
+    public void testThreeLinkBinTree(){
+        ThreeLinkBinTree<String> threeLinkBinTree = new ThreeLinkBinTree<>("root");
+        System.out.println("该二叉树的根节点:"+threeLinkBinTree.root().data);
+        ThreeLinkBinTree.Node rootLeft = threeLinkBinTree.add(threeLinkBinTree.root(),"1L",true);
+        ThreeLinkBinTree.Node rootRight =threeLinkBinTree.add(threeLinkBinTree.root(),"1R",false);
+
+        ThreeLinkBinTree.Node nodeLeft2L = threeLinkBinTree.add(rootLeft,"1L2L",true);
+        ThreeLinkBinTree.Node nodeLeft2R =threeLinkBinTree.add(rootLeft,"1L2R",false);
+
+        ThreeLinkBinTree.Node nodeRight2L = threeLinkBinTree.add(rootRight,"1R2L",true);
+        ThreeLinkBinTree.Node nodeRight2R =threeLinkBinTree.add(rootRight,"1R2R",false);
+
+        System.out.println("rootLeft的左节点："+threeLinkBinTree.left(rootLeft));
+        System.out.println("rootLeft的右节点："+threeLinkBinTree.right(rootLeft));
+        System.out.println("nodeLeft2L的右节点："+threeLinkBinTree.parent(nodeRight2L));
+        System.out.println("threeLinkBinTree的深度："+ threeLinkBinTree.deep());
+    }
 }
