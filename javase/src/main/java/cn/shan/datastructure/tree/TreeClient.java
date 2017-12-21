@@ -2,6 +2,7 @@ package cn.shan.datastructure.tree;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -88,5 +89,23 @@ public class TreeClient {
         System.out.println("rootLeft的右节点："+threeLinkBinTree.right(rootLeft));
         System.out.println("nodeLeft2L的右节点："+threeLinkBinTree.parent(nodeRight2L));
         System.out.println("threeLinkBinTree的深度："+ threeLinkBinTree.deep());
+    }
+
+    @Test
+    public void testHuffmanTree(){
+        HuffmanTree.TreeNode treeNodeA = new HuffmanTree.TreeNode("A",5.00);
+        HuffmanTree.TreeNode treeNodeB = new HuffmanTree.TreeNode("B",10.00);
+        HuffmanTree.TreeNode treeNodeC = new HuffmanTree.TreeNode("C",16.00);
+        HuffmanTree.TreeNode treeNodeD = new HuffmanTree.TreeNode("D",8.00);
+        List< HuffmanTree.TreeNode> treeNodes = new ArrayList<>();
+        treeNodes.add(treeNodeA);
+        treeNodes.add(treeNodeB);
+        treeNodes.add(treeNodeC);
+        treeNodes.add(treeNodeD);
+        HuffmanTree huffmanTree = new HuffmanTree();
+        HuffmanTree.TreeNode rootNode = huffmanTree.createHuffmanTree(treeNodes);
+        List<HuffmanTree.TreeNode> huffmanTreeBreadthFirst =   huffmanTree.breadthFirst(rootNode);
+        System.out.println(huffmanTreeBreadthFirst);
+
     }
 }

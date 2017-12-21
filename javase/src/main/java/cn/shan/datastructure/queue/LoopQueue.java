@@ -6,7 +6,7 @@ package cn.shan.datastructure.queue;
  */
 public class LoopQueue<T> {
 
-    private int DEFAULT_SIZE = 10;
+    private int DEFAULT_SIZE = 30;
     private int capacity;
     private int rear;
     private int front;
@@ -42,6 +42,10 @@ public class LoopQueue<T> {
         }else{
             rear++;
         }
+    }
+
+    public T element(){
+        return (T) elementsData[front];
     }
 
     public T remove(){
