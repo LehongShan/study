@@ -36,6 +36,10 @@ public class ArrayBinTree<T> {
 
     //因为index从零开始 所以以下添加左右节点的时候得+1
     public void add(T data,int index,boolean left){
+
+        if (  datas[index]==null) {
+            throw new IndexOutOfBoundsException("索引："+index+"节点为空，不能添加子节点");
+        }
         if (left){
             fullLeft(index);
             datas[2*index+1] = data;
