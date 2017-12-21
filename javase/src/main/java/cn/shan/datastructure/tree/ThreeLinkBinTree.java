@@ -1,5 +1,10 @@
 package cn.shan.datastructure.tree;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * 三叉链表表示二叉树
  * Created by shanlehong on 2017/12/21.
@@ -127,4 +132,88 @@ public class ThreeLinkBinTree<T> {
         }
     }
 
+    /**
+     * 先序遍历 DLR
+     * @return
+     */
+    public List<Node> preIterator(){
+        return  preIterator(root());
+    }
+    private List<Node> preIterator(Node node){
+        List<Node> list = new ArrayList<>();
+        list.add(node);
+        while(node.left!=null){
+            list.addAll(preIterator(node.left));
+        }
+        while (node.right!=null){
+            list.addAll(preIterator(node.right));
+        }
+        return list;
+    }
+
+    /**
+     * 中序遍历 LDR
+     * @return
+     */
+    public List<Node> middleIterator(){
+        return middleIterator(root());
+    }
+    private List<Node> middleIterator(Node node){
+        List<Node> list = new ArrayList<>();
+        while(node.left!=null){
+            list.addAll(preIterator(node.left));
+        }
+        list.add(node);
+        while (node.right!=null){
+            list.addAll(preIterator(node.right));
+        }
+        return list;
+    }
+
+    /**
+     * 后序遍历  LRD
+     * @return
+     */
+    public List<Node> postIterator(){
+        return postIterator(root());
+    }
+    private List<Node> postIterator(Node node){
+        List<Node> list = new ArrayList<>();
+        while(node.left!=null){
+            list.addAll(preIterator(node.left));
+        }
+        while (node.right!=null){
+            list.addAll(preIterator(node.right));
+        }
+        list.add(node);
+
+        return list;
+    }
+
+    /**
+     * 广度优先遍历
+     * @return
+     */
+    public List<Node> breadthFirst(){
+        List<Node> list = new ArrayList<>();
+        Queue<Node> queue = new ArrayDeque<>();
+        if (root() == null){
+            return null;
+        }else {
+            queue.offer(root());
+            while (queue.peek()!=null){
+                Node node = queue.peek();
+                queue.poll();
+                if (node.left!=null){
+                    queue.offer(node.left);
+                    list.add(node.left);
+                }
+                if (node.right!=null){
+                    queue.offer(node.right);
+                    list.add(node.right);
+                }
+            }
+        }
+        return list;
+    }
 }
