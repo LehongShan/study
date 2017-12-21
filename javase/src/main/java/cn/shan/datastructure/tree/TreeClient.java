@@ -51,4 +51,23 @@ public class TreeClient {
         arrayBinTree.add("2L",1,true);
         System.out.println(arrayBinTree);
     }
+
+    @Test
+    public void testTwoLinkBinTree(){
+        TwoLinkBinTree<String> twoLinkBinTree = new TwoLinkBinTree<>("root");
+        System.out.println("该二叉树的根节点:"+twoLinkBinTree.root().data);
+        TwoLinkBinTree.Node rootLeft = twoLinkBinTree.add(twoLinkBinTree.root(),"1L",true);
+        TwoLinkBinTree.Node rootRight =twoLinkBinTree.add(twoLinkBinTree.root(),"1R",false);
+
+        TwoLinkBinTree.Node nodeLeft2L = twoLinkBinTree.add(rootLeft,"1L2L",true);
+        TwoLinkBinTree.Node nodeLeft2R =twoLinkBinTree.add(rootLeft,"1L2R",false);
+
+        TwoLinkBinTree.Node nodeRight2L = twoLinkBinTree.add(rootRight,"1R2L",true);
+        TwoLinkBinTree.Node nodeRight2R =twoLinkBinTree.add(rootRight,"1R2R",false);
+
+        System.out.println("rootLeft的左节点："+twoLinkBinTree.left(rootLeft));
+        System.out.println("rootLeft的右节点："+twoLinkBinTree.right(rootLeft));
+
+        System.out.println("twoLinkBinTree的深度："+ twoLinkBinTree.deep());
+    }
 }
