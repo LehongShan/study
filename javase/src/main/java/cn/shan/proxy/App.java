@@ -18,13 +18,14 @@ public class App {
         demo.say("demo");
 
         //static proxy
-        new DemoProxyS(new Demo()).say("demo");
+        new DemoProxyS(demo).say("demo");
         //jdk proxy
         IDemo demo1 = new cn.shan.proxy.dynamicproxy.ProxyFactory<>(demo).getInstance();
         demo1.say("demo");
         //cglib proxy
-        IDemo demo2 = new cn.shan.proxy.cglibproxy.ProxyFactory<>(demo).getInstance();
-        demo2.say("demo");
+        Demo demo2 = new Demo();
+        Demo demoPorxy = new cn.shan.proxy.cglibproxy.ProxyFactory<>(demo2).getInstance();
+        demoPorxy.say("demo");
 
     }
 }

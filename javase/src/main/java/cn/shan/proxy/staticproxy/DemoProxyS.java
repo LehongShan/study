@@ -12,8 +12,8 @@ import cn.shan.proxy.base.IDemo;
 public class DemoProxyS implements IDemo {
 
 
-    private Demo demo;
-    public DemoProxyS(Demo demo){
+    private IDemo demo;
+    public DemoProxyS(IDemo demo){
         this.demo = demo;
     }
     @Override
